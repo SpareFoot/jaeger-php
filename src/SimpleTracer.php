@@ -28,7 +28,7 @@ use JaegerPhp\Sampler\ConstSampler;
 
 class SimpleTracer {
 
-    public function __construct($traceLabel, $traceSpanLabel, $agentUri, $injectTarget = [], $debugTrace = FALSE, $environment = NULL) {
+    public function __construct($traceLabel, $traceSpanLabel, $agentUri, $injectTarget = [], $debugTrace = FALSE, $environment = NULL, $sampleRate = 0.0001) {
         if (!$agentUri) {
             throw new \InvalidArgumentException('$agentUri cannot be null');
         }
@@ -43,7 +43,7 @@ class SimpleTracer {
             if ($debugTrace) {
                 $sampler = new ConstSampler();
             } else {
-                $sampler = new ProbabilisticSampler();
+                $sampler = new ProbabilisticSampler($sampleRate);
             }
 
             $traceConfig->setSampler($sampler);
