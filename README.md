@@ -1,4 +1,6 @@
 # jaeger-php
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSpareFoot%2Fjaeger-php.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSpareFoot%2Fjaeger-php?ref=badge_shield)
+
 
 ## principle of Distributed Tracing
 
@@ -127,3 +129,6 @@ An autoflushing tracer and span usage:
     ...
 
     $tracer->finishSpan($span1, [...tags..]);
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSpareFoot%2Fjaeger-php.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FSpareFoot%2Fjaeger-php?ref=badge_large)
